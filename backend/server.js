@@ -28,11 +28,11 @@ connectToDB();
 
 const server = http.createServer(app);
 const io = new Server(server, {
-    cors: {
-      origin: ["http://localhost:3000", "https://whiteboard-tutorial-eight.vercel.app"], 
-      methods: ["GET", "POST"],
-    },
-  });
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+  },
+});
 
 let canvasData = {};
 let i = 0;
